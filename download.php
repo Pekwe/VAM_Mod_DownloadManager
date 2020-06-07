@@ -18,7 +18,7 @@ require('check_login.php');
 			<div class="panel-heading">
 				<div class="panel-title">
 					<?php
-						if (isset($_SESSION["access_administration_panel"]) || isset($_SESSION["access_administration_panel"])){
+						if ($_SESSION["access_administration_panel"] === '1' || $_SESSION["access_administration_panel"] === '1'){
 							echo '<button type="button" name="create_folder" id="create_folder" class="btn btn-xs btn-danger pull-right">Create New Folder</button> VA DOWNLOAD MANAGER ';
 						}
 						else{
@@ -101,7 +101,7 @@ require('check_login.php');
     </div>
 </div>
 
-<?php if (isset($_SESSION["access_administration_panel"]) || isset($_SESSION["access_administration_panel"])){ ?>
+<?php if ($_SESSION["access_administration_panel"] === '1' || $_SESSION["access_administration_panel"] === '1'){ ?>
 <script>
     $(document).ready(function(){
 
